@@ -35,7 +35,7 @@ request param digunakan untuk mengakses suatu nilai dari query parameter, sedang
 -masih belum mengerti konsep dari spring boot, karena masih terbiasa dengan django
 -masih cukup bingung masalah mengenai git
 
-##referensi:
+### referensi:
 https://www.javapedia.net/Spring-MVC-Interview-questions/676
 https://www.baeldung.com/spring-requestparam-vs-pathvariable
 https://www.learntek.org/blog/what-is-maven/
