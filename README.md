@@ -3,8 +3,26 @@
 ## Authors
 
 * **Iqfal Fazrial Pramudya** - *1906353920* - *A*
+## Tutorial 2
+### Pertanyaan 1: Cobalah untuk menambahkan sebuah Kebun dengan mengakses link berikut setelah menjalankan program: http://localhost:8080/kebun-safari/add?id=1&nama=Papa%20APAP&alamat=Maung%20Fasilkom&noTelepon=081xxx Apa yang terjadi? Jelaskan mengapa hal tersebut dapat terjadi
+Terjadi whitelabel error, karena pada saat mengakses link tersebut pada controller merereturn sebuah string yang berupa file HTML, tetapi file HTML tersebut belum dibuat pada folder templates.
 
-## Tutorial 1
+### Pertanyaan 2: Menurut kamu anotasi @Autowired pada class Controller tersebut merupakan implementasi dari konsep apa? Dan jelaskan secara singkat cara kerja@Autowired tersebut dalam konteks service dan controller yang telah kamu buat
+@Autowired merupakan implementasi dari konsep Dependency Injection. @Autowired berguna untuk menggantika setter dan injection pada constructor, sehingga field yang terdapat anotasi @Autowired dapat diisi secara otomatis oleh spring sesuai dengan yang dibutuhkan. Dengan begitu dapat membuat lebih hemat penulisan kode. 
+
+### Pertanyaan 3: Cobalah untuk menambahkan sebuah Kebun dengan mengakses link berikut:http://localhost:8080/kebun-safari/add?id=1&nama=Papa%20APAP&alamat=Maung%20Fasilkom Apa yang terjadi? Jelaskan mengapa hal tersebut dapat terjadi.
+Terjadi whitelabel error karena parameter yang diberikan tidak lengkap, parameter noTelepon tidak ada pada link tersebut, sedangkan parameter tersebut pada controller diwajibkan untuk diisi.
+
+### Pertanyaan 4: Jika Papa APAP ingin melihat Kebun Safari dengan nama Papa APAP, link apa yang harus diakses?
+Untuk dapat melihat nama Papa APA perlu mengetahui ID dari Kebun Safari tersebut, jika mengetahui ID-nya dapat mengakses link:http://localhost:8080/kebun-safari/view/{id} atau http://localhost:8080/kebun-safari?id=<no id> . Sedangkan jika tidak mengetahui ID dari Kebun Safari tersebut, Link yang harus diakses adalah http://localhost:8080/, dari link tersebut dapat dilihat list Kebun Safari yang ada dan dari list tersebut kita dapat melihat nama dari Kebun Safari yang ada.
+  
+### Pertanyaan 5: Tambahkan 1 contoh Kebun Safari lainnya sesukamu. Lalu cobalah untuk mengakses http://localhost:8080/ , apa yang akan ditampilkan? Sertakan juga bukti screenshotmu.
+Ketika mengakses link http://localhost:8080/ yang ditampilkan adalah daftar Kebun Safari yang sudah saya tambahkan. Berikut link gambar terkait: https://drive.google.com/file/d/11olxFYOeid-1qX26EOK_hC9mAxeU2aOH/view?usp=sharing
+
+#### referensi:
+  1.https://www.baeldung.com/spring-autowire
+  2.https://software.endy.muhardin.com/java/memahami-dependency-injection/
+  
 ### What I have learned today
 -Cara membuat model, controller, dan tampilan html dengan menggunakan spring
 -Menghubungkan file pada drive lokal ke github
