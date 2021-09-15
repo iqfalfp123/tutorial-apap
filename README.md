@@ -4,7 +4,6 @@
 
 * **Iqfal Fazrial Pramudya** - *1906353920* - *A*
 
----
 ## Tutorial 1
 ### What I have learned today
 -Cara membuat model, controller, dan tampilan html dengan menggunakan spring
@@ -36,3 +35,16 @@ request param digunakan untuk mengakses suatu nilai dari query parameter, sedang
 ### What I did not understand
 -masih belum mengerti konsep dari spring boot, karena masih terbiasa dengan django
 -masih cukup bingung masalah mengenai git
+
+### referensi:
+https://www.javapedia.net/Spring-MVC-Interview-questions/676
+https://www.baeldung.com/spring-requestparam-vs-pathvariable
+https://www.learntek.org/blog/what-is-maven/
+https://idwebhost.com/blog/pengertian-dan-manfaat-git/
+https://idcloudhost.com/pengertian-dan-manfaat-git-bagi-developer/
+https://www.petanikode.com/java-maven/
+https://www.zendesk.com/blog/issue-tracker/
+https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues
+https://coderslegacy.com/what-are-dependencies-in-programming/
+https://www.idtech.com/blog/what-are-libraries-in-coding
+https://spring.io/why-spring
