@@ -3,13 +3,14 @@
 ## Authors
 
 * **Iqfal Fazrial Pramudya** - *1906353920* - *A*
+
 ## Tutorial 1
 ### What I have learned today
 -Cara membuat model, controller, dan tampilan html dengan menggunakan spring
 -Menghubungkan file pada drive lokal ke github
 ### Github
 1. Apa itu Issue Tracker? Apa saja masalah yang dapat diselesaikan dengan Issue Tracker?
-Issue tracker adalah sebuah fitur yang berguna untuk mencatat issue jika terjadi sebuah masalah, sehingga kita dapat mengatur dan memprioritaskan masalah yang berkaitan dengan proyek yang ada. Terdapat beberapa masalah yang dapat diselesaikan dengan  Issue Tracker, seperti menangani masalah bug ketika login, mengekspor data, dan masalah mengenai bug lainnya. Dengan menggunakan Issue Tracker kita dapat melakukan pelacakan masalah lebih mudah.
+Issue tracker sebuah fitur yang berguna untuk mencatat issue jika terjadi sebuah masalah, sehingga kita dapat mengatur dan memprioritaskan masalah yang berkaitan dengan proyek yang ada. Terdapat beberapa masalah yang dapat diselesaikan dengan  Issue Tracker, seperti menangani masalah bug ketika login, mengekspor data, dan masalah mengenai bug lainnya. Dengan menggunakan Issue Tracker kita dapat melakukan pelacakan masalah lebih mudah.
 
 2. Apa perbedaan dari git merge dan git merge --squash?
 git merge dapat digunakan untuk menyatukan suatu branch dengan branch lainnya sehingga dapat menghasilkan beberapa merge commit, sedangkan git merge squash penggabungan branch yang hanya menghasilkan satu merge commit.
@@ -47,5 +48,3 @@ https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues
 https://coderslegacy.com/what-are-dependencies-in-programming/
 https://www.idtech.com/blog/what-are-libraries-in-coding
 https://spring.io/why-spring
-
-
