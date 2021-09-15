@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <title>Detail Kebun Safari</title>
+</head>
+<body>
+    <h2>Detail Kebun Safari</h2>
+        <div th:if = "${kebunSafari != null}">
+        <p th:text="'ID kebun Safari ' + ${kebunSafari.idKebunSafari} "></p>
+        <p th:text=" 'Nama Kebun Safari: ' + ${kebunSafari.namaKebunSafari} "></p>
+        <p th:text=" 'Alamat: ' + ${kebunSafari.alamat} "></p>
+        <p th:text=" 'Nomor Telepon: ' + ${kebunSafari.noTelepon} "></p>
+    </div>
+    <div th:unless = "${kebunSafari != null}">
+            <p th:text="'ID kebun Safari tersebut tidak ditemukan'"></p>
+    </div>
+</body>
+</html>
