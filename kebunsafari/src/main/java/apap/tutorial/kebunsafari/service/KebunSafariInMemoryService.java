@@ -8,6 +8,7 @@ import java.util.ArrayList;
 @Service
 public class KebunSafariInMemoryService implements KebunSafariService{
     private List<KebunSafariModel> listKebunSafari;
+    public List<KebunSafariModel> hasil;
 
     // Constructor
     public KebunSafariInMemoryService(){
@@ -45,14 +46,14 @@ public class KebunSafariInMemoryService implements KebunSafariService{
         return null;
 }
 
-@Override
-public KebunSafariModel getKebunSafariByNamaKebunSafari(String namaKebunSafari) {
-    List<KebunSafariModel> listkebunsafari = getKebunSafariList();
-    for (KebunSafariModel x : listkebunsafari) {
-        if (x.getNamaKebunSafari().equals(namaKebunSafari)) {
-            return x;
+    @Override
+    public KebunSafariModel getKebunSafariByNamaKebunSafari(String namaKebunSafari) {
+        List<KebunSafariModel> listkebunsafari = getKebunSafariList();
+        for (KebunSafariModel x : listkebunsafari) {
+            if (x.getNamaKebunSafari().equals(namaKebunSafari)) {
+                return x;
+            }
         }
+        return null;
     }
-    return null;
-}
-}
+    }

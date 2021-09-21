@@ -93,8 +93,15 @@ public class KebunSafariController {
     }
     @RequestMapping("/kebun-safari/delete-by-name")
     public String deleteKebunSafaribynama(@RequestParam(value = "nama", required = true) String namaKebunSafari, Model model) {
-        KebunSafariModel kebunSafari = kebunSafariService.getKebunSafariByNamaKebunSafari(namaKebunSafari);
-        kebunSafariService.getKebunSafariList().remove(kebunSafari);
+        List<KebunSafariModel> lst = kebunSafariService.getKebunSafariList();
+        int len = lst.size();
+        for(int i = 0; i < len; i++) {
+            KebunSafariModel kebunSafari =  kebunSafariService.getKebunSafariByNamaKebunSafari(namaKebunSafari);
+            kebunSafariService.getKebunSafariList().remove(kebunSafari);
+        }
+        // for(KebunSafariModel x: kebunSafari){
+        // }
+        // print(kebunSafari);
         model.addAttribute("kebunSafari", namaKebunSafari);
         return "deletebynama";
     }
