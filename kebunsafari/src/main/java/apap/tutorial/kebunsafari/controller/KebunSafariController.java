@@ -91,4 +91,11 @@ public class KebunSafariController {
         // }
         return "delete-kebun-safari";
     }
+    @RequestMapping("/kebun-safari/delete-by-name")
+    public String deleteKebunSafaribynama(@RequestParam(value = "nama", required = true) String namaKebunSafari, Model model) {
+        KebunSafariModel kebunSafari = kebunSafariService.getKebunSafariByNamaKebunSafari(namaKebunSafari);
+        kebunSafariService.getKebunSafariList().remove(kebunSafari);
+        model.addAttribute("kebunSafari", namaKebunSafari);
+        return "deletebynama";
+    }
 }

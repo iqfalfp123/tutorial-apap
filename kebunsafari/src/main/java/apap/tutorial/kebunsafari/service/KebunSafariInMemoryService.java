@@ -44,4 +44,15 @@ public class KebunSafariInMemoryService implements KebunSafariService{
     }
         return null;
 }
+
+@Override
+public KebunSafariModel getKebunSafariByNamaKebunSafari(String namaKebunSafari) {
+    List<KebunSafariModel> listkebunsafari = getKebunSafariList();
+    for (KebunSafariModel x : listkebunsafari) {
+        if (x.getNamaKebunSafari().equals(namaKebunSafari)) {
+            return x;
+        }
+    }
+    return null;
+}
 }

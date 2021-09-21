@@ -10,4 +10,6 @@ public interface KebunSafariService {
     KebunSafariModel getKebunSafariByIdKebunSafari(String idKebunSafari);
     
     KebunSafariModel setPhoneKebunSafari(String idKebunSafari, String noTelepon);
+    
+    KebunSafariModel getKebunSafariByNamaKebunSafari(String namaKebunSafari);
 }
