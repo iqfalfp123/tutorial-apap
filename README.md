@@ -3,6 +3,30 @@
 ## Authors
 
 * **Iqfal Fazrial Pramudya** - *1906353920* - *A*
+## Tutorial 3
+### 1. Tolong jelaskan secara singkat apa kegunaan dari anotasi-anotasi yang ada pada model(@AllArgsConstructor, @NoArgsConstructor, @Setter, @Getter, @Entity, @Table)
+@AllArgsConstructor berguna untuk membuat constructor dengan satu parameter secara otomatis. @NoArgsConstructor untuk membuat constructor tanpa parameter secara otomatis. @Setter untuk membuat method set default secara otomatis. @Getter untuk membuat method get secara otomatis. @Entity untuk menentukan bahwa class merupakan sebuah entitas. @Table untuk menentukan nama tabel dalam database.
+
+### 2.  Pada class CabangDB, terdapat method findByNoCabang, apakah kegunaan dari methodtersebut?
+Method tersebut berguna untuk mencari data cabang yang ada pada database berdasarkan nomor cabang.
+
+### 3. Jelaskan perbedaan kegunaan dari anotasi @JoinTable dan @JoinColumn
+@JoinTable berfungsi untuk membuat table baru dengan cara menggabungkan column-column pada tabel lain sesuai yang kita ingingkan. Sedangkan @JoinColumn berfungsi untuk membuat column yang berfungsi untuk menghubungkan antara dua entitas.
+
+### 4. Pada class PegawaiModel, digunakan anotasi @JoinColumn pada atribut cabang, apa kegunaan dari name, referencedColumnName, dan nullable dalam anotasi tersebut? dan apa perbedaan nullable dan penggunaan anotasi @NotNull
+name berguna untuk memberikan nama dari column foreign key tersebut. referencedColumnName berguna untuk menentukan column yang direference oleh foreign key column tersebut. nullable untuk menentukan apakah foreign key column tersebut dapat null atau tidak. Nullabel dan @NotNull memiliki perbedaan, yaitu nullable merupakan bagian dari spesifikasi Java Perstistence API, sedangkan @NotNull didefinisikan dalam spesifikasi Bean Validation. Kemudian, pada Nullable method dapat mengembalikkan nilai null, sedangkan @NotNull tidak. Selain itu, Nullable dapat memiliki variabel yang dapat berupa null, sedangkan @NotNull tidak.
+
+### 5. Jelaskan kegunaan FetchType.LAZY, CascadeType.ALL, dan FetchType.EAGER
+FetchType.LAZY berfungsi untuk menentukan tidak melakukan load data secara otomatis(perlu memanggil objeknya terlebih dahulu) pada suatu entitas yang saling berelasi. FetchType.EAGER berfungsi untuk menentukan melakukan load data secara otomatis pada suatu entitas yang saling berelasi. CascadeType.ALL menentukan bahwa segala operasi yang dilakukan akan berpengaruh kepada entitas tersebut.
+
+##Referensi:
+https://auth0.com/blog/a-complete-guide-to-lombok/
+https://www.sinaungoding.com/relasi-one-to-one-hibernate-anotasi/
+https://docs.oracle.com/javaee/6/api/javax/persistence/JoinColumn.html
+https://docs.oracle.com/javaee/7/api/javax/persistence/package-summary.html
+https://thorben-janssen.com/hibernate-tips-whats-the-difference-between-column-nullable-false-and-notnull/
+https://www.jetbrains.com/help/idea/nullable-and-notnull-annotations.html#nullable
+
 ## Tutorial 2
 ### Pertanyaan 1: Cobalah untuk menambahkan sebuah Kebun dengan mengakses link berikut setelah menjalankan program: http://localhost:8080/kebun-safari/add?id=1&nama=Papa%20APAP&alamat=Maung%20Fasilkom&noTelepon=081xxx Apa yang terjadi? Jelaskan mengapa hal tersebut dapat terjadi
 Terjadi whitelabel error, karena pada saat mengakses link tersebut pada controller merereturn sebuah string yang berupa file HTML, tetapi file HTML tersebut belum dibuat pada folder templates.
