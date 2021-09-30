@@ -30,11 +30,15 @@ public class MenuModel implements Serializable{
     private String namaMenu;
 
     @NotNull
-    @Size(max=30)
     @Column(name="is_available", nullable = false)
     private Boolean isAvailable;
 
     @ManyToMany(mappedBy = "listMenu")
     List<CabangModel> listCabang;
+
+    @NotNull
+    @Size(max = 50)
+    @Column(nullable = false)
+    private String deskripsiMenu;
     
 }
