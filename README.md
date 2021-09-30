@@ -3,6 +3,22 @@
 ## Authors
 
 * **Iqfal Fazrial Pramudya** - *1906353920* - *A*
+
+### Tutorial 4
+### 1. Jelaskan perbedaan th:include dan th:replace!
+th:replace berguna untuk mengganti tag yang digunakan saat ini dengan tag yang mendefinisikan fragmen. Sedangkan th:include digunakan untuk memasukkan atau menempatkan fragmen kedalam tag yang ada.
+
+### 2. Jelaskan apa fungsi dari th:object!
+th:object berguna untuk menentukan object yang akan digunakan dalam formulir yang nantinya akan dikirimkan.
+
+### 3. Jelaskan perbedaan dari * dan $ pada saat penggunaan th:object! Kapan harus dipakai?
+$ merupakan variable expressions, digunakan untuk memilih variabel yang sudah didefinisikan. Sedangkan * merupakan selection expressions yang memiliki kegunaan yang hampir sama dengan variable expressions, perbedaanya adalah * digunakan ketika menggunakan th:object. 
+
+## Referensi:
+https://www.baeldung.com/thymeleaf-in-spring-mvc
+https://www.sinaungoding.com/yuk-belajar-web-menggunakan-spring-boot2/
+https://www.thymeleaf.org/doc/articles/standarddialect5minutes.html
+
 ## Tutorial 3
 ### 1. Tolong jelaskan secara singkat apa kegunaan dari anotasi-anotasi yang ada pada model(@AllArgsConstructor, @NoArgsConstructor, @Setter, @Getter, @Entity, @Table)
 @AllArgsConstructor berguna untuk membuat constructor dengan satu parameter secara otomatis. @NoArgsConstructor untuk membuat constructor tanpa parameter secara otomatis. @Setter untuk membuat method set default secara otomatis. @Getter untuk membuat method get secara otomatis. @Entity untuk menentukan bahwa class merupakan sebuah entitas. @Table untuk menentukan nama tabel dalam database.
