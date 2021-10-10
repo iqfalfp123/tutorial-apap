@@ -88,4 +88,20 @@ public class PegawaiController {
 
         return "delete-pegawai";
     }
+    @PostMapping("/pegawai/delete")
+    public String deletePegawaiSubmit(
+        @ModelAttribute CabangModel cabang,
+        Model model)
+    {
+        model.addAttribute("noCabang", cabang.getNoCabang());
+        LocalTime now = LocalTime.now();
+        if(now.isBefore(cabang.getWaktuBuka()) || now.isAfter(cabang.getWaktuTutup())) {
+           for (PegawaiModel pegawai : cabang.getListPegawai()) {
+            pegawaiService.deletePegawai(pegawai);
+
+        }
+        return "delete-pegawai";
+    }
+    return "error-cannot-delete";
+}
 }

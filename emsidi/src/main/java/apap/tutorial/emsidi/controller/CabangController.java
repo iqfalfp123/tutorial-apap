@@ -2,7 +2,9 @@ package apap.tutorial.emsidi.controller;
 
 import apap.tutorial.emsidi.model.CabangModel;
 import apap.tutorial.emsidi.model.PegawaiModel;
+import apap.tutorial.emsidi.model.MenuModel;
 import apap.tutorial.emsidi.service.CabangService;
+import apap.tutorial.emsidi.service.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -17,11 +19,21 @@ public class CabangController {
     @Qualifier("cabangServiceImpl")
     @Autowired
     private CabangService cabangService;
+
+    @Qualifier("menuServiceImpl")
+    @Autowired
+    MenuService menuService;
     private int value;
+    private int row = 1;
 
     @GetMapping("/cabang/add")
     public String addCabangForm(Model model) {
+        List<MenuModel> listMenu = menuService.getListMenu();
         model.addAttribute("cabang", new CabangModel());
+        model.addAttribute("listMenu", listMenu);
+    //     if(row != 0) {
+        model.addAttribute("row", row);
+    // }
         return "form-add-cabang";
     }
 
@@ -29,7 +41,9 @@ public class CabangController {
     public String addCabangSubmit(
         @ModelAttribute CabangModel cabang, Model model
     ){
+
         cabangService.addCabang(cabang);
+        row = 1;
         model.addAttribute("noCabang", cabang.getNoCabang());
         return "add-cabang";
     }
@@ -46,7 +60,8 @@ public class CabangController {
     ){
         CabangModel cabang = cabangService.getCabangByNoCabang(noCabang);
         List<PegawaiModel> listPegawai = cabang.getListPegawai();
-
+        List<MenuModel> listMenu = cabang.getListMenu();
+        model.addAttribute("listMenu", listMenu);
         model.addAttribute("cabang", cabang);
         model.addAttribute("listPegawai", listPegawai);
         return "view-cabang";
@@ -110,5 +125,17 @@ public class CabangController {
         model.addAttribute("listCabang", listCabang);
         return "viewall-cabang-order";
 
+    }
+    @PostMapping("/tambah/row")
+    public String tambahRow(Model model) {
+        row++;
+        return addCabangForm(model);
+    }
+    @PostMapping("/hapus/row")
+    public String hapusRow(Model model) {
+        if(row > 0){
+        row--;
+        }
+        return addCabangForm(model);
     }
 }
