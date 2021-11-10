@@ -3,6 +3,33 @@
 ## Authors
 
 * **Iqfal Fazrial Pramudya** - *1906353920* - *A*
+### Tutorial 5
+### 1. Apa itu Postman? Apa kegunaannya?
+Postman merupakan sebuah aplikasi yang digunakan untuk melakukan testing REST API, serta membuat & memodifikasi API. Selain itu, Postman juga dapat digunakan untuk melakukan visualisasi dari request response.
+
+### 2. Jelaskan fungsi dari anotasi @JsonIgnoreProperties dan @JsonProperty
+@JsonIgnoreProperties merupakan sebuah anotasi pada tingkat class yang digunakan untuk mengabaikan sebuah logical properties yang spesifik.
+ Sedangkan @JsonProperty adalah sebuah anotasi yang berguna untuk memberikan nama untuk sebuah properti pada JSON.
+
+### 3. Apa kegunaan atribut WebClient?
+WebClient merupakan sebuah modul dari Spring Web Reactive berguna sebagai interface pada sebuah web request yang berfungsi 
+untuk melakukan komunikasi dengan server HTTP.
+
+### 4. Apa itu ResponseEntity dan BindingResult? Apa kegunaannya?
+ResponseEntity merupakan sebuah extension dari HttpEntity yang merepresentasikan secara keseluruhan sebuah HTTP response, seperti status code, headers
+dan body. Selain itu, ResponseEntity juga dapat digunakan untuk melakukan konfigurasi HTTP response. Sedangkan BindingResult adalah sebuah interface
+yang berguna untuk menyimpan hasil validasi dari sebuah error yang terjadi.
+
+##Referensi:
+http://www.davismol.net/2015/03/10/jackson-json-difference-between-jsonignore-and-jsonignoreproperties-annotations/ 
+https://www.baeldung.com/jackson-annotations
+https://antares.id/id/postman.html
+https://www.techgeeknext.com/spring-boot/webflux/spring-boot-webclient-example
+https://www.baeldung.com/spring-5-webclient
+https://www.baeldung.com/spring-response-entity
+https://technicalsand.com/using-responseentity-in-spring/
+https://zetcode.com/spring/bindingresult/
+https://blog.postman.com/10-postman-features-everyone-should-know/
 
 ### Tutorial 4
 ### 1. Jelaskan perbedaan th:include dan th:replace!
