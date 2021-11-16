@@ -13,6 +13,8 @@ import org.springframework.web.server.ResponseStatusException;
 import reactor.core.publisher.Mono;
 
 import javax.validation.Valid;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
@@ -22,6 +24,7 @@ import java.util.NoSuchElementException;
 public class PegawaiRestController {
     @Autowired
     private PegawaiRestService pegawaiRestService;
+    private ArrayList<PegawaiModel> listBaru = new ArrayList<PegawaiModel>();
 
     @PostMapping(value = "/pegawai")
     private PegawaiModel createPegawai(@Valid @RequestBody PegawaiModel pegawai, BindingResult bindingResult) {
@@ -77,4 +80,15 @@ public class PegawaiRestController {
         Mono<ResponsePegawai> response = pegawaiRestService.getUmurPegawai(noPegawai);
         return pegawaiRestService.addUmurPegawai(noPegawai, response.block().getAge());
     }
+     @GetMapping(value = "/pegawai/jenis-kelamin/{jenisKelamin}")
+     private List<PegawaiModel> retrieveListPegawaiByJenisKelamin(@PathVariable("jenisKelamin") int jenisKelamin){
+        List<PegawaiModel> listPegawai = pegawaiRestService.retrieveListPegawai();
+        listBaru.clear();
+        for(PegawaiModel x : listPegawai){
+            if(x.getJenisKelamin() == jenisKelamin) {
+                listBaru.add(x);
+            }
+        }
+        return listBaru;
+     }
 }
