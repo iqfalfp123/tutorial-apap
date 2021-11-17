@@ -3,6 +3,31 @@
 ## Authors
 
 * **Iqfal Fazrial Pramudya** - *1906353920* - *A*
+
+### Tutorial 6
+### 1. Jelaskan secara singkat perbedaan Otentikasi dan Otorisasi! Di bagian mana (dalam kode yang telah anda buat) konsep tersebut diimplementasi?
+Otentikasi adalah sebuah proses untuk melakukan identifikasi pengguna, sedangkan otorisasi adalah proses untuk menentukan pengguna apakah memiliki izin untuk melakukan suatu tugas tertentu atau tidak. Pada lab kali ini, contoh otentikasi adalah login, sedangkan otorisasi adalah ketika suatu user dengan role tertentu dapat mengakses suatu halaman atau fitur yang ada.
+
+### 2. Apa itu BCryptPasswordEncoder? Jelaskan secara singkat cara kerja dan tujuannya
+BCryptPasswordEncoder adalah suatu algoritma untuk melakukan hashing pada password, sehingga password yang dimasukkan nantinya akan dirubah dalam bentuk hashcode, Bcrypt sendiri dapat menghasilkan hashcode yang berbeda meskipun input yang dimasukkan sama.
+
+### 3. Apakah penyimpanan password sebaiknya menggunakan encryption atau hashing? Mengapa demikian?
+Sebaiknya penyimpanan password menggunakan hashing, karena hasing melakukan konversi password kedalam hashcode secara permanen, sedangkan encryption code yang dihasilkan dapat dilakukan decode dan encode.
+
+### 4. Jelaskan secara singkat apa itu UUID beserta penggunaannya!
+UUID adalah sebuah kumpulan karakter yang dibuat secara acak untuk menghasilkan suatu data yang unik. UUID berguna untuk menghasilkan unique key pada sebuah table.
+
+### 5. Apa kegunaan class UserDetailsServiceImpl.java? Mengapa harus ada class tersebut padahal kita sudah memiliki class UserRoleServiceImpl.java?
+UserDetailsServiceImpl digunakan dan harus ada karena untuk mengambil informasi mengenai data pengguna dan melalukan autentikasi pengguna, karena class UserRoleServiceImpl yang dibuat belum dapat melakukan autentikasi pengguna, sehingga harus ada class UserDetailsServiceImpl tersebut.
+
+##referensi:
+https://id-laravel.com/post/menggunakan-uuid-di-php-laravel/
+https://www.meego.id/2019/03/membuat-unique-key-dengan-uuid-mysql.html
+https://www.terraform.io/docs/language/functions/uuid.html
+https://www.akakom.ac.id/site/news/124/autentikasi-dan-otorisasi-user-menggunakan-framework-yii
+https://www.clickssl.net/blog/difference-between-hashing-vs-encryption
+https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/crypto/bcrypt/BCryptPasswordEncoder.html
+
 ### Tutorial 5
 ### 1. Apa itu Postman? Apa kegunaannya?
 Postman merupakan sebuah aplikasi yang digunakan untuk melakukan testing REST API, serta membuat & memodifikasi API. Selain itu, Postman juga dapat digunakan untuk melakukan visualisasi dari request response.
