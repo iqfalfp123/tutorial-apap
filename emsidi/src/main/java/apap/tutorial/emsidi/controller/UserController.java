@@ -73,8 +73,12 @@ public class UserController {
 
         if (passwordEncoder.matches(oldPassword, user.getPassword()) & newPassword.equals(confirmPassword)) {
             // Encode new password and store it
-            userService.updateUser(user, newPassword);
-            return "update-password";
+            if (newPassword.equals(oldPassword)) {
+                return "gagal-update";
+            } else {
+                userService.updateUser(user, newPassword);
+                return "update-password";
+            }
         }
         return "gagal-update";
     }
