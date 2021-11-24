@@ -44,15 +44,26 @@
     </nav> -->
     <div class="d-flex justify-content-center">
         <div class="m-4">
+            <h2 style="text-align:center" th:text="'Hello ' + ${#httpServletRequest.remoteUser}+'!'">Login as</h2>
             <h2>Selamat datang di Emsidi</h2>
-            <div class="d-flex justify-content-center">
+            <div class="my-3 d-flex justify-content-center">
                 <a th:href="@{/cabang/viewall}" class="mx-2 btn btn-dark">Lihat semua cabang</a>
-                <a th:href="@{/cabang/add}" class="mx-2 btn btn-outline-dark">Tambah cabang</a>
+                 <a th:href="@{/user/update-password}" class="mx-2 btn btn-dark">Update Password</a>
+                <div sec:authorize="hasAuthority('Manajer')">
+                <a th:href="@{/cabang/add}" class="mx-2 btn btn-dark">Tambah cabang</a>
+                </div>
             </div>
             <div class=" my-3 d-flex justify-content-center">
                 <a th:href="@{/menu/viewall}" class="mx-2 btn btn-dark">Lihat semua menu</a>
-                <a th:href="@{/menu/add}" class="mx-2 btn btn-outline-dark">Tambah menu</a>
+                <div sec:authorize="hasAuthority('Manajer')">
+                <a th:href="@{/menu/add}" class="mx-2 btn btn-dark">Tambah menu</a>
+                </div>
             </div>
+            <br>
+        <div sec:authorize="hasAuthority('Admin')">
+        <div class="my3 d-flex justify-content-center">
+            <a th:href="@{/user/add}" class="mx-2 btn btn-outline-warning">Tambah User Baru</a>
+        </div>
         </div>
     </div>
     </body>

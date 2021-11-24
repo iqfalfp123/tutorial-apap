@@ -20,8 +20,10 @@
                                 <th>Waktu Buka</th>
                                 <th>Waktu Tutup</th>
                                 <th>Lihat</th>
+                                <div sec:authorize="hasAuthority('Manajer')">
                                 <th>Ubah</th>
                                 <th>Hapus</th>
+                                </div>
                             </tr>
                             </thead>
                             <tbody>
@@ -37,12 +39,14 @@
                                 <td>
                                     <a class="btn btn-primary" th:href="@{/cabang/view(noCabang=${cabang.noCabang})}">Lihat</a>
                                 </td>
+                                <div sec:authorize="hasAuthority('Manajer')">
                                 <td>
                                 <a class="btn btn-primary" th:href="@{/cabang/update/} + ${cabang.noCabang}">Ubah</a>
                                 </td>
                                 <td>
                                 <a class="btn btn-primary" th:href="@{/cabang/delete/} + ${cabang.noCabang}">Hapus</a>
                                 </td>
+                                </div>
                             </tr>
                             </tbody>
                         </table>
