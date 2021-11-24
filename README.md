@@ -4,6 +4,42 @@
 
 * **Iqfal Fazrial Pramudya** - *1906353920* - *A*
 
+### Tutorial 7
+### 1. Jelaskan apa yang Anda lakukan di latihan dalam satu paragraf per-soal. Berikan screenshot sebagai ilustrasi dari apa yang Anda jelaskan.
+#### latihan 1:
+Pada latihan nomor 1, saya mengerjakan fitur untuk menghapus item yang sudah dimasukkan ke Cart. Pada halaman My Cart nantinya terdapat daftar item yang sebelumnya sudah ditambahkan. Kemudian, kita dapat menghapus item tersebut dari cart dengan melakukan klik pada icon hapus di pojok atas sebelah kanan. Untuk kodenya sendiri, saya menjalankan method splice pada array yang berisikan item pakaian yang telah ditambahkan kedalam cart. Method splice sendiri berguna untuk menghapus item yang dipilih dari daftar array list item yang sudah ditambahkan. Berikut adalah screenshot codenya.
+![image](https://user-images.githubusercontent.com/85183301/143271679-54d3a3c2-b17a-4026-a3a0-2560ab6b7f23.png)
+
+#### latihan 2:
+Pada latihan nomor 2, saya mengerjakan fitur untuk mengurangi saldo balance ketika ada item yang ditambahkan kedalam cart, serta melakukan penambahan saldo balance ketika item dihapus dari cart. Untuk caranya sendiri saya mengambil harga item yang dimasukkan kedalam cart dengan cara mengurangi saldo saat ini (this.state.balance) dengan item.price, sehingga menghasilkan saldo balance yang sesuai dengan. Untuk menambah saldo ketika item dihapus dari cart caranya sama dengan mengurangi saldo, hanya perbedaannya adalah saldo saat ini (this.state.balance) dikurangi dengan item.price. Berikut adalah screenshot codenya.
+![image](https://user-images.githubusercontent.com/85183301/143271443-5587bc74-d5f3-4f7f-97d4-635b566d330a.png)
+![image](https://user-images.githubusercontent.com/85183301/143271619-766bf427-f659-4051-a7e8-3efd02a0740a.png)
+
+#### latihan 3:
+Pada latihan nomor 3, saya mengerjakan fitur untuk menampilkan notifikasi ketika menambahkan suatu item, tetapi saldo balance yang dimiliki lebih sedikit daripada harga item tersebut. Untuk menghandle case tersebut, caranya saya menggunakan if condition, yakni jika saldo balance saat ini (this.state.balance) lebih kecil dari harga item maka akan menjalankan alert("Balance not sufficient") untuk menampilkan notification box. Berikut adalah screenshot codenya.
+
+![image](https://user-images.githubusercontent.com/85183301/143272842-673dd33c-bb12-4f2e-8c13-f4fde4917368.png)
+
+
+### 2. Menurut pemahaman kamu selama pengerjaan tutorial ini, apa perbedaan antara state dan props?
+state merupakan sebuah data yang disimpan didalam component yang dapat berubah seiring berjalannya waktu. State hanya dapat diakses dan dimodifikasi datanya dari dalam komponen. Sedangkan props adalah sebuah objek yang menyimpan nilai atribut dari tag yang mirip dengan atribut HTML. Selain itu, props tidak dapat dimodifikasi dari dalam komponen.
+
+### 3. Menurut kamu, apakah sebaiknya kita menggunakan component (e.g. List, Item) dalam React? sebutkan alasannya.
+Kita sebaiknya menggunakan component tersebut. Karena dengan memiliki berbagai component tersebut akan membantu kita dalam membuat aplikasi, yakni mudah ketika ingin membuat fitur yang menggunakan suatu kode spesifik yang terdapat pada satu komponen, mudah dalam melakukan perubahan code, serta memudahkan ketika melakukan debugging ketika terdapat suatu error.
+
+### 4. Apa perbedaan class component dan functional component?
+functional component merupakan sebuah javascript function dengan struktur kode yang ringkas dan hanya bisa menggunakan props atau biasa disebut stateless component. Sedangkan class component dapat menggunakan state dan props atau bisa disebut stateful componenent dan biasanya digunanakan untuk membuat component yang cukup kompleks.
+
+### 5. Dalam react, apakah perbedaan component dan element?
+element merupakan sebuah plain objek yang merepresentasikan DOM yang berisi informasi tentang jenis komponen seperti tombol, properti dan element turunannya. Sedangkan component merupakan sebuah bit kode yang dapat digunakan kembali dan nantinya kumpulan komponen tersebut akan membentuk sebuah aplikasi.
+
+## referensi:
+https://www.javatpoint.com/react-state-vs-props
+https://www.mahirkoding.com/tutorial-react-perbedaan-state-dan-props/
+https://hobikoding.github.io/component-react/
+https://reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html
+https://www.w3schools.com/react/react_components.asp
+
 ### Tutorial 6
 ### 1. Jelaskan secara singkat perbedaan Otentikasi dan Otorisasi! Di bagian mana (dalam kode yang telah anda buat) konsep tersebut diimplementasi?
 Otentikasi adalah sebuah proses untuk melakukan identifikasi pengguna, sedangkan otorisasi adalah proses untuk menentukan pengguna apakah memiliki izin untuk melakukan suatu tugas tertentu atau tidak. Pada lab kali ini, contoh otentikasi adalah login, sedangkan otorisasi adalah ketika suatu user dengan role tertentu dapat mengakses suatu halaman atau fitur yang ada.
