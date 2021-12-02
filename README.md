@@ -7,6 +7,7 @@
 ### Tutorial 8
 ### 1. Ceritakan langkah - langkah yang kalian lakukan untuk solve LATIHAN no.1, dan mengapa kalian melakukan langkah - langkah tersebut?
 Pada latihan 1, langkah yang dilakukan sehingga form yang akan diisi tidak berisi value dari form sebelumnya adalah dengan melakukan setState pada method handleSubmitItem. Pada method tersebut, setelah melakukan post data ke API dilakukan setState untuk title, price , description, category, quantity menjadi seperti pada state awal atau default.
+
 ![image](https://user-images.githubusercontent.com/85183301/144450832-af435ac5-e569-49dc-8e21-26f49248fd36.png)
 
 ### 2. Jelaskan fungsi dari async dan await!
