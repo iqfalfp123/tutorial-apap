@@ -4,6 +4,31 @@
 
 * **Iqfal Fazrial Pramudya** - *1906353920* - *A*
 
+### Tutorial 8
+### 1. Ceritakan langkah - langkah yang kalian lakukan untuk solve LATIHAN no.1, dan mengapa kalian melakukan langkah - langkah tersebut?
+Pada latihan 1, langkah yang dilakukan sehingga form yang akan diisi tidak berisi value dari form sebelumnya adalah dengan melakukan setState pada method handleSubmitItem. Pada method tersebut, setelah melakukan post data ke API dilakukan setState untuk title, price , description, category, quantity menjadi seperti pada state awal atau default.
+![image](https://user-images.githubusercontent.com/85183301/144450832-af435ac5-e569-49dc-8e21-26f49248fd36.png)
+
+### 2. Jelaskan fungsi dari async dan await!
+Async dan await merupakan sebuah syntax yang digunakan untuk bekerja dengan promises agar lebih mudah. Async sendiri berguna sebagai fungsi yang selalu mengembalikkan sebuah promises. Await hanya dapat berada didalam async dan membuat sebuah fungsi menunggu sampai sebuah promises selesai.
+
+### 3. Masukkan jawaban dari Screenshot yang diperintahkan di halaman 9 pada Component Lifecycle pada pertanyaan ini.
+![1](https://user-images.githubusercontent.com/85183301/144448031-a2b724ad-1cc2-4bc0-8fdb-b6a151d0b162.png)
+![2](https://user-images.githubusercontent.com/85183301/144448036-24864339-5d96-499c-97f0-4fe19602dcfd.png)
+![3](https://user-images.githubusercontent.com/85183301/144448042-67bf5ac6-7acd-4b40-8bac-3f1dd442c3b2.png)
+![4](https://user-images.githubusercontent.com/85183301/144448044-7e4c30df-845e-4f41-8a4f-b3c30edabc1a.png)
+![5](https://user-images.githubusercontent.com/85183301/144448047-e34371ec-3872-4f58-8831-4e747b6445c6.png)
+![6](https://user-images.githubusercontent.com/85183301/144448050-70eced00-84c0-43ac-8b37-cd69435a241a.png)
+
+### 4. Jelaskan fungsi dari componentDidMount, shouldComponentUpdate, componentDidUpdate, componentWillReceiveProps, componentWillUnmount.
+componentDidMount merupakan sebuah method yang dipanggil setelah component berhasil dirender. componentDidMount merupakan sebuah method yang dipanggil setelah component diupdate di DOM. shouldComponentUpdate berguna untuk memberi tahu react bahwa output dari component tidak terpangaruh oleh perubahan state atau props. Method ini dipanggil sebelum rendering ketika state atau props baru sedang diterima. componentWillReceiveProps digunakan untuk melakukan update state dengan nilai props terbaru sebagai bentuk respon. Metode ini dipanggil ketika props diteruskan ke instance props. componenWillUnmount berguna agar dapat mengeksekusi react code ketika komponen dilepas dari DOM (Document Object Model). Method ini dipanggil sebelum komponen dilepas, yakni pada fase Unmount dari React Life-cycle.
+
+## referensi:
+https://www.geeksforgeeks.org/reactjs-componentwillunmount-method/
+https://www.tutorialspoint.com/reactjs-componentwillreceiveprops-method
+https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/update/component_will_receive_props.html
+https://javascript.info/async-await
+
 ### Tutorial 7
 ### 1. Jelaskan apa yang Anda lakukan di latihan dalam satu paragraf per-soal. Berikan screenshot sebagai ilustrasi dari apa yang Anda jelaskan.
 #### latihan 1:
@@ -45,7 +70,7 @@ https://www.w3schools.com/react/react_components.asp
 Otentikasi adalah sebuah proses untuk melakukan identifikasi pengguna, sedangkan otorisasi adalah proses untuk menentukan pengguna apakah memiliki izin untuk melakukan suatu tugas tertentu atau tidak. Pada lab kali ini, contoh otentikasi adalah login, sedangkan otorisasi adalah ketika suatu user dengan role tertentu dapat mengakses suatu halaman atau fitur yang ada.
 
 ### 2. Apa itu BCryptPasswordEncoder? Jelaskan secara singkat cara kerja dan tujuannya
-BCryptPasswordEncoder adalah suatu algoritma untuk melakukan hashing pada password, sehingga password yang dimasukkan nantinya akan dirubah dalam bentuk hashcode, Bcrypt sendiri dapat menghasilkan hashcode yang berbeda meskipun input yang dimasukkan sama.
+BCryptPasswordEncoder adalah suatu algoritma untuk melakukan hashing pada password, sehingga password yang dimasukkan nantinya akan dirubah dalam bentuk hashcode, Bcrypt sendiri dapat menghasilkan hashcode yang berbeda meskipun input yang dimasukkan sama. 
 
 ### 3. Apakah penyimpanan password sebaiknya menggunakan encryption atau hashing? Mengapa demikian?
 Sebaiknya penyimpanan password menggunakan hashing, karena hasing melakukan konversi password kedalam hashcode secara permanen, sedangkan encryption code yang dihasilkan dapat dilakukan decode dan encode.
